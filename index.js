@@ -28,7 +28,7 @@ module.exports = function(options){
   args.push('-')
 
   // the avconv stream that inherits stderr
-  var video_process = child.spawn('raspivid', args, {
+  var video_process = child.spawn('libcamera-vid', args, {
     stdio: ['ignore', 'pipe', 'inherit']
   });
 
